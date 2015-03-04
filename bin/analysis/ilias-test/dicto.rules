@@ -1,13 +1,6 @@
-BibEntry = PhpClass with name:"ilBibliographicEntry"
-BibObj = PhpClass with name:"ilObjBibliographic"
-ilObj2 = PhpClass with name:"ilObject2"
 WholeIliasCodebase = PhpClass with name:"il*"
 triggerError = PhpClass with name:"trigger_error"
 exitOrDie = PhpClass with name:"exit/die"
-
-BibEntry cannot depend on BibObj
-BibObj must depend on BibEntry
-BibObj must depend on ilObj2
 
 /**
  * The global function trigger_error is a procedural concept. Please ommit this function and use an

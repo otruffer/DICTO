@@ -1,49 +1,20 @@
 {
 	"results" : {
-		"id" : "1425463560",
+		"id" : "1425479268",
 		"rules" : {
 			"1" : {
-				"documentation" : "",
-				"value" : "BibEntry cannot depend on BibObj",
-				"failed" : "true",
-				"subrules" : {
-					"1001" : {
-						"failed" : "true",
-						"value" : "BibEntry cannot depend on BibObj",
-						"testedBy" : "DIPhpDependencies",
-						"errors" : [
-							{
-								"fix" : "",
-								"cause" : "ilBibliographicEntry dependOn ilObjBibliographic = True",
-								"details" : ""
-							}
-						]
-					}
-				}
-			},
-			"4" : {
 				"documentation" : "The global function trigger_error is a procedural concept. Please ommit this function and use an \nexception instead. This also helps in keeping consistent feedback for developers and end users. \n \nSee: http://example.com/link-to-exception-handling-concept \n",
 				"value" : "WholeIliasCodebase cannot depend on triggerError",
 				"failed" : "true",
 				"subrules" : {
-					"4001" : {
+					"1001" : {
 						"failed" : "true",
 						"value" : "WholeIliasCodebase cannot depend on triggerError",
 						"testedBy" : "DIPhpDependencies",
 						"errors" : [
 							{
 								"fix" : "",
-								"cause" : "ilFormPropertyGUI dependOn trigger_error = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
 								"cause" : "ilMath dependOn trigger_error = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilClaimingPermissionHelper dependOn trigger_error = True",
 								"details" : ""
 							},
 							{
@@ -53,12 +24,22 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilBrowser dependOn trigger_error = True",
+								"cause" : "ilClaimingPermissionHelper dependOn trigger_error = True",
 								"details" : ""
 							},
 							{
 								"fix" : "",
 								"cause" : "ilDAVLocks dependOn trigger_error = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilFormPropertyGUI dependOn trigger_error = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilBrowser dependOn trigger_error = True",
 								"details" : ""
 							}
 						]
@@ -66,320 +47,18 @@
 				}
 			},
 			"2" : {
-				"documentation" : "",
-				"value" : "BibObj must depend on BibEntry",
-				"failed" : "false",
-				"subrules" : {
-					"2001" : {
-						"failed" : "false",
-						"value" : "BibObj must depend on BibEntry",
-						"testedBy" : "DIPhpDependencies"
-					}
-				}
-			},
-			"5" : {
 				"documentation" : "Exit and die are a bad idea in both development and production. In development you have no idea what \nwent wrong and in production the user receives a white page and has no idea what's going on. If you \nwant to deny access use an ilAccessDenied Exception. \n \nException: Currently if you want to output json you most likely have to use exit() at the moment. The \nrule still documents the violation as it should be removed sometimes in the future. \n \nSee: http://example.com/link-to-exception-handling-concept \n",
 				"value" : "WholeIliasCodebase cannot depend on exitOrDie",
 				"failed" : "true",
 				"subrules" : {
-					"5001" : {
+					"2001" : {
 						"failed" : "true",
 						"value" : "WholeIliasCodebase cannot depend on exitOrDie",
 						"testedBy" : "DIPhpDependencies",
 						"errors" : [
 							{
 								"fix" : "",
-								"cause" : "ilObjExerciseGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjSystemFolderGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjTestDynamicQuestionSetConfigGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilInternalLinkGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjTaxonomyGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjGroupGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilLPObjectStatisticsGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjPortfolioTemplateGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjPortfolioGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPageEditorGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomClearTask dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilLPListOfObjectsGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjChatroomGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilCloudPluginUploadGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjDlBookGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjTestGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilMySQLAbstraction dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSCORMOfflineMode dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSCORMItemGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjCourseGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilCloudPluginCreateFolderGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjItemGroupGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSoapStructureObject dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilWikiPageGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomPrivateRoomTask dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilCopyWizardPage dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilHTTPS dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilLMPageObjectGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilImprintGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomPollTask dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjectPluginGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPluginReader dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilForum dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomPostMessageTask dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomViewTask dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilExplorerBaseGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilWikiHTMLExport dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjTypeDefinitionGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilAuthContainerOpenId dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilGlossaryPresentationGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilCharSelectorGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSharedResourceGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilXmlWriter dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilInitialisation dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjFileGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilLocalUserGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilShopGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjPaymentSettingsGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilnetucateResponse dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilFileDataCourse dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilHelpGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSearchBaseGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjWorkspaceFolderGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilCustomBlock dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilRatingGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjSCORM2004LearningModuleGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjBlog dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilStructureObjectGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilContObjectExport dependOn exit/die = True",
+								"cause" : "ilObjectPlugin dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -389,82 +68,7 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilMDEditorGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPublicUserProfileGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilRoleAutoCompleteInputGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilRepositoryGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilTable2GUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilScorm2004Export dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjectGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomKickTask dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjMediaPoolGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilCommonActionDispatcherGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilBlogPostingGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSAHSEditGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjQuestionPoolGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilExAssignment dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilRegistrationSettingsGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilTestScoringByQuestionsGUI dependOn exit/die = True",
+								"cause" : "ilPageObjectGUI dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -474,147 +78,7 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilObjStyleSheet dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPCInteractiveImage dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilMimeMail dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjContentObject dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjMailGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilLearningProgressBaseGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomHistoryTask dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPreviewGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilCloudPluginActionListGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilNestedSetXML dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjContentObjectGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilFileDataGroup dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSessionStatisticsGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjPollGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPaymentVendors dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilAlphabetInputGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSAHSPresentationGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjSCORM2004LearningModule dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilTestExport dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilBookmarkBlockGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjCourseVerificationGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjDataCollectionGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilDBAnalyzer dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSCORM2004PageGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjTermsOfServiceGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilHACPPresentationGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilUserImportParser dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPageObject dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPCParagraph dependOn exit/die = True",
+								"cause" : "ilChatroomPrivateRoomTask dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -624,72 +88,7 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilObjUserGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPCParagraphGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjCloudGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilScoringAdjustmentGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilBasicSkill dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilScormSpecialPagesTableGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjSurveyQuestionPoolGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPasswordAssistanceGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjiLincCourseGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjLinkResourceGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilContainerLinkListGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilErrorHandling dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjComponentSettingsGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilDataCollectionRecordEditGUI dependOn exit/die = True",
+								"cause" : "ilPaymentStatisticGUI dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -699,132 +98,7 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilUnitUtil dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSearchGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilStartUpGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilMediaItem dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjBlogGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilMailAddressbookGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilUtil dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjectPlugin dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPageLayoutGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSCORMPresentationGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSCORM2004ScoGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSurveyEvaluationGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPDSelectedItemsBlockGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilWikiStat dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomServerHandler dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilLMTracker dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomInitialTask dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilCalendarBlockGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjRoleTemplateGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjCategoryGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjSAHSLearningModuleGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjSessionGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilContObjParser dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjSurveyQuestionPool dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilClassificationBlockGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilMailSearchGUI dependOn exit/die = True",
+								"cause" : "ilForum dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -834,7 +108,52 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilSCORM13Package dependOn exit/die = True",
+								"cause" : "ilObjiLincClassroom dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCalendarRemoteAccessHandler dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPaymentVendors dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjItemGroupGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilBookmarkBlockGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjGlossary dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPollBlockGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPDExternalFeedBlockGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilAdvancedMDRecordGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilWikiHTMLExport dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -844,7 +163,932 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilPollBlockGUI dependOn exit/die = True",
+								"cause" : "ilLMTracker dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilLMPageObjectGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPDSelectedItemsBlockGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilFileDataCourse dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilBlogPostingGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPCParagraph dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjWorkspaceFolderGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSharedResourceGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjSCORMLearningModule dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSearchGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilRepositorySearchGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilContObjParser dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilChatroomInviteUsersToPrivateRoomTask dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjUserFolderGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjTestGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSCORM2004Tracking dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilTermsOfServiceJsonResponse dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilGlossaryTermGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCourseObjectivesGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCOPageHTMLExport dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilMailSearchGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilChatroomClearTask dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjTestVerificationGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilLMPresentationGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilScorm2004Export dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjUserGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjLinkResourceGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjBlog dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilInitialisation dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilScormSpecialPagesTableGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilLocalUserGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilWikiStatGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjSurveyAdministrationGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjCourseGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilTestExport dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSAHSPresentationGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPCParagraphGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjUserAccess dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilShopGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilFormPropertyDispatchGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSoapStructureReader dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjSessionGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjWikiGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilHierarchyFormGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilClassificationBlockGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCalendarAppointmentGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjectPluginGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilContObjectExport dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilTestScoringByQuestionsGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjDlBookGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjCategoryGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCopyWizardPage dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilAdministrationGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjRoleTemplateGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSCORM2004StoreData dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCommonActionDispatcherGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilMailAddressbookGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSearchBaseGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjBlogGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjTestDynamicQuestionSetConfigGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCloudPluginDeleteGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilChatroomGetPermissionsTask dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjFileGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilnetucateResponse dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilChatroomInitialTask dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjPortfolioGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSCORMItemGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjMediaCastGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilWikiStat dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilRegistrationSettingsGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSetting dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilStructureObjectGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCalendarBlockGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilStartUpGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPortfolioPageGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPropertyFormGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilMediaItem dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjChatroomGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilNewsForContextBlockGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSoapStructureObject dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjPaymentSettingsGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilTestPlayerAbstractGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilFileSystemGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilRoleAutoCompleteInputGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSCORMOfflineMode dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjExerciseGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilLPStatusFactory dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPageEditorGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilFileDataGroup dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCustomBlock dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilLPObjectStatisticsGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilExport dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjHACPTracking dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjPortfolioTemplateGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjTermsOfServiceGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSetupGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCloudPluginCreateFolderGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilGlossaryPresentationGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjContentObjectGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjMediaPoolGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilChatroomViewTask dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjCourseVerificationGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilErrorHandling dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjSAHSLearningModuleGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjTypeDefinitionGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilWebAccessChecker dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilMimeMail dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPCInteractiveImage dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjSCORM2004LearningModuleGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilHACPPresentationGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilImprintGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilTaxonomyNode dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjRecoveryFolderGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjSystemFolderGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSurveyEvaluationGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjSCORMVerificationGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilChatroomPostMessageTask dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSAHSEditGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilExAssignment dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilChatroomBlockGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilRatingGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjExerciseVerificationGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilUtil dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilChatroomHistoryTask dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilExplorerBaseGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilTable2GUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjMailGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjDataCollectionGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjGroupGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilWikiPageGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilContainerLinkListGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjPollGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPortfolioHTMLExport dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilDAVServer dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilChatroomServerHandler dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilAuthContainerOpenId dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPasswordAssistanceGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilDataCollectionRecordEditGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjSurveyGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjectFactory dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPublicUserProfileGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilInternalLinkGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilUnitUtil dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilScoringAdjustmentGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSCORM13Player dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPaymentTrustees dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilChatroomKickTask dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjectGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjCloudGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilRemoteObjectBaseGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilNestedSetXML dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjLanguageExtGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCloudPluginUploadGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilMySQLAbstraction dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilTaggingGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjSurveyQuestionPool dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilLearningProgressBaseGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSessionStatisticsGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPreviewGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilFormPropertyGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilChatroomBanTask dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilUserImportParser dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilBasicSkill dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilMailingListsGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjContentObject dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilExternalFeedBlockGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilCloudPluginActionListGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilTreeExplorerGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilLPListOfObjectsGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilHTTPS dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjiLincCourseGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjQuestionPoolGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSCORM13Package dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilMDEditorGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPageLayoutGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjSCORM2004LearningModule dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilValidator dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObject2GUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilSCORM2004ScoGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilRepositoryGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilHelpGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilObjStyleSheet dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPluginReader dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilPageObject dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilDBAnalyzer dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilDataCollectionRecordListGUI dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -859,72 +1103,17 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilObjExerciseVerificationGUI dependOn exit/die = True",
+								"cause" : "ilCharSelectorGUI dependOn exit/die = True",
 								"details" : ""
 							},
 							{
 								"fix" : "",
-								"cause" : "ilFormPropertyGUI dependOn exit/die = True",
+								"cause" : "ilSCORM2004PageGUI dependOn exit/die = True",
 								"details" : ""
 							},
 							{
 								"fix" : "",
-								"cause" : "ilObjLanguageExtGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilValidator dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPDExternalFeedBlockGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSetupGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilAdvancedMDRecordGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilNewsForContextBlockGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjSCORMLearningModuleGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilTermsOfServiceJsonResponse dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObject2GUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilExternalFeedBlockGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilWikiStatGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomInviteUsersToPrivateRoomTask dependOn exit/die = True",
+								"cause" : "ilAlphabetInputGUI dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -934,52 +1123,7 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilObjSurveyAdministrationGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilHierarchyFormGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjectFactory dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilLPStatusFactory dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilTaggingGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilRemoteObjectBaseGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjMediaCastGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjiLincClassroom dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilDAVServer dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSoapStructureReader dependOn exit/die = True",
+								"cause" : "ilSetup dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -989,152 +1133,12 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilCOPageHTMLExport dependOn exit/die = True",
+								"cause" : "ilObjGlossaryGUI dependOn exit/die = True",
 								"details" : ""
 							},
 							{
 								"fix" : "",
-								"cause" : "ilWebAccessChecker dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPaymentTrustees dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjGlossary dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSCORM13Player dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjTestVerificationGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomBanTask dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilGlossaryTermGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilCalendarAppointmentGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilFormPropertyDispatchGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilAdministrationGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjSurveyGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilLMPresentationGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjSCORMLearningModule dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilRepositorySearchGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilChatroomBlockGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilDataCollectionRecordListGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjHACPTracking dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPropertyFormGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSCORM2004Tracking dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilCalendarRemoteAccessHandler dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilTestPlayerAbstractGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjRecoveryFolderGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilFileSystemGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPortfolioHTMLExport dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilCloudPluginDeleteGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilTreeExplorerGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjUserAccess dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSetup dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjWikiGUI dependOn exit/die = True",
+								"cause" : "ilObjSurveyQuestionPoolGUI dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -1144,7 +1148,12 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilPaymentStatisticGUI dependOn exit/die = True",
+								"cause" : "ilObjSCORMLearningModuleGUI dependOn exit/die = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "ilXmlWriter dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -1154,22 +1163,17 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilSCORM2004StoreData dependOn exit/die = True",
+								"cause" : "ilObjComponentSettingsGUI dependOn exit/die = True",
 								"details" : ""
 							},
 							{
 								"fix" : "",
-								"cause" : "ilObjSCORMVerificationGUI dependOn exit/die = True",
+								"cause" : "ilObjTaxonomyGUI dependOn exit/die = True",
 								"details" : ""
 							},
 							{
 								"fix" : "",
-								"cause" : "ilCourseObjectivesGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilSetting dependOn exit/die = True",
+								"cause" : "ilSCORMPresentationGUI dependOn exit/die = True",
 								"details" : ""
 							},
 							{
@@ -1179,57 +1183,10 @@
 							},
 							{
 								"fix" : "",
-								"cause" : "ilChatroomGetPermissionsTask dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjUserFolderGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilExport dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPortfolioPageGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilMailingListsGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilPageObjectGUI dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilTaxonomyNode dependOn exit/die = True",
-								"details" : ""
-							},
-							{
-								"fix" : "",
-								"cause" : "ilObjGlossaryGUI dependOn exit/die = True",
+								"cause" : "ilChatroomPollTask dependOn exit/die = True",
 								"details" : ""
 							}
 						]
-					}
-				}
-			},
-			"3" : {
-				"documentation" : "",
-				"value" : "BibObj must depend on ilObj2",
-				"failed" : "false",
-				"subrules" : {
-					"3001" : {
-						"failed" : "false",
-						"value" : "BibObj must depend on ilObj2",
-						"testedBy" : "DIPhpDependencies"
 					}
 				}
 			}

@@ -1,22 +1,12 @@
- [VERBOSE] 
- BibObj must depend on ilObj2
-y
+ [INFO] :: generate report (/home/otruffer/dicto/bin/analysis/ilias-test/results.xml)
 n exitOrDie
-or
-or
-Codebase cannot depend on exitOrDie
 e of [WholeIliasCodebase] is not of type: Website // var type of [exitOrDie] is not of type: Website]
 t of type: Package // var type of [exitOrDie] is not of type: System // var type of [exitOrDie] is not of type: Package]
 ass]
 
  type: Class // var type of [exitOrDie] is not of type: Method // var type of [exitOrDie] is not of type: Field]
 : Field]
-t. Please ommit this function and use an
- * exception instead. This also helps in keeping consistent feedback for developers and end users.
- *
- * See: http://example.com/link-to-exception-handling-concept
- */
-WholeIliasCodebase cannot depend on triggerError
+epend on triggerError
 
 /**
  * Exit and die are a bad idea in both development and production. In development you have no idea what
@@ -24,6 +14,12 @@ WholeIliasCodebase cannot depend on triggerError
  * want to deny access use an ilAccessDenied Exception.
  *
  * Exception: Currently if you want to output json you most likely have to use exit() at the moment. The
+ *            rule still documents the violation as it should be removed sometimes in the future.
+ *
+ * See: http://example.com/link-to-exception-handling-concept
+ */
+WholeIliasCodebase cannot depend on exitOrDie
+t() at the moment. The
  *            rule still documents the violation as it should be removed sometimes in the future.
  *
  * See: http://example.com/link-to-exception-handling-concept
