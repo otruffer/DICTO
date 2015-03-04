@@ -1,0 +1,8 @@
+ [INFO] :: generate report (/home/otruffer/dicto/bin/analysis/DictoTestSuite/results.xml)
+Error
+f [WholeCodebase] is not of type: Website // var type of [triggerError] is not of type: Website]
+e: Package // var type of [triggerError] is not of type: System // var type of [triggerError] is not of type: Package]
+ass]
+
+lass // var type of [triggerError] is not of type: Method // var type of [triggerError] is not of type: Field]
+ 	//fails

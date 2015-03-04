@@ -1,0 +1,21 @@
+#!/bin/bash  
+
+## VM
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+VM_BINARY_NAME="Pharo"
+VM_BINARY_NAME_LINUX="pharo"
+VM_DIR="$DIR/bin/dicto-engine"
+TMP_OS=`uname | tr "[:upper:]" "[:lower:]"`
+
+if [[ "{$TMP_OS}" = *darwin* ]]; then
+    CMD="$VM_DIR/pharo-vm/Pharo.app/Contents/MacOS/Pharo --headless $VM_DIR/Moose.image"
+elif [[ "{$TMP_OS}" = *linux* ]]; then
+    CMD="$VM_DIR/pharo-vm/pharo --nodisplay $VM_DIR/Moose.image"
+else
+    echo "Unsupported OS";
+exit 1;
+fi
+
+$CMD dicto-server --action=start
+
+

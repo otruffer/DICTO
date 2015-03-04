@@ -1,0 +1,80 @@
+grep: /home/otruffer/dicto/TestProject/bin/org/jhotdraw/application/DrawApplication1.class: No such file or directory
+grep: /home/otruffer/dicto/TestProject/bin/org/jhotdraw/application/DrawApplication0.class: No such file or directory
+/phpda/configs/modelScript-1424776150.sh: No such file or directory
+/home/otruffer/dicto/bin/tools/phpda/configs/modelScript-1424776494.sh: Permission denied
+
+
+                                                                       
+  [RangeException]                                                     
+  The lexer returned an invalid token (id=0, value=#!/usr/bin/env php  
+  )                                                                    
+                                                                       
+
+
+analyze [-m|--mode[="..."]] [-s|--source[="..."]] [-p|--filePattern[="..."]] [-i|--ignore[="..."]] [-f|--formatter[="..."]] [-t|--target[="..."]] [config]
+
+
+
+
+                                                                       
+  [RangeException]                                                     
+  The lexer returned an invalid token (id=0, value=#!/usr/bin/env php  
+  )                                                                    
+                                                                       
+
+
+analyze [-m|--mode[="..."]] [-s|--source[="..."]] [-p|--filePattern[="..."]] [-i|--ignore[="..."]] [-f|--formatter[="..."]] [-t|--target[="..."]] [config]
+
+
+
+
+                                                                       
+  [RangeException]                                                     
+  The lexer returned an invalid token (id=0, value=#!/usr/bin/env php  
+  )                                                                    
+                                                                       
+
+
+analyze [-m|--mode[="..."]] [-s|--source[="..."]] [-p|--filePattern[="..."]] [-i|--ignore[="..."]] [-f|--formatter[="..."]] [-t|--target[="..."]] [config]
+
+
+
+
+                                                                       
+  [RangeException]                                                     
+  The lexer returned an invalid token (id=0, value=#!/usr/bin/env php  
+  )                                                                    
+                                                                       
+
+
+analyze [-m|--mode[="..."]] [-s|--source[="..."]] [-p|--filePattern[="..."]] [-i|--ignore[="..."]] [-f|--formatter[="..."]] [-t|--target[="..."]] [config]
+
+
+
+
+                                                                       
+  [RangeException]                                                     
+  The lexer returned an invalid token (id=0, value=#!/usr/bin/env php  
+  )                                                                    
+                                                                       
+
+
+analyze [-m|--mode[="..."]] [-s|--source[="..."]] [-p|--filePattern[="..."]] [-i|--ignore[="..."]] [-f|--formatter[="..."]] [-t|--target[="..."]] [config]
+
+
+
+
+                                                                   
+  [RangeException]                                                 
+  The lexer returned an invalid token (id=0, value=#!/usr/bin/php  
+  )                                                                
+                                                                   
+
+
+analyze [-m|--mode[="..."]] [-s|--source[="..."]] [-p|--filePattern[="..."]] [-i|--ignore[="..."]] [-f|--formatter[="..."]] [-t|--target[="..."]] [config]
+
+
+/home/otruffer/dicto/bin/analysis/DictoTestSuite/1424861154/DIPingUptime-cmd.sh: line 1: syntax error near unexpected token `('
+/home/otruffer/dicto/bin/analysis/DictoTestSuite/1424861154/DIPingUptime-cmd.sh: line 1: `chmod +x /home/otruffer/dicto/bin/dicto-engine/../analysis/DictoTestSuite/1424861154/DIPingUptime-test.sh(crontab -l; echo "*/5 * * * * /home/otruffer/dicto/bin/dicto-engine/../analysis/DictoTestSuite/1424861154/DIPingUptime-test.sh") |crontab'
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=64m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0

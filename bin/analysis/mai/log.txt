@@ -1,0 +1,8 @@
+ [INFO] :: prepare tests
+t (/home/otruffer/dicto/bin/analysis/mai/results.xml)
+ on DictoTalker
+ [DictoTalker] is not of type: Website // var type of [DictoTalker] is not of type: Website]
+: Package // var type of [DictoTalker] is not of type: System // var type of [DictoTalker] is not of type: Package]
+ass]
+
+ass // var type of [DictoTalker] is not of type: Method // var type of [DictoTalker] is not of type: Field]

@@ -1,0 +1,62 @@
+{
+	"results" : {
+		"id" : "1425462358",
+		"rules" : {
+			"1" : {
+				"documentation" : "",
+				"value" : "RuleResult cannot depend on DictoTalker",
+				"failed" : "true",
+				"subrules" : {
+					"1001" : {
+						"failed" : "true",
+						"value" : "RuleResult cannot depend on DictoTalker",
+						"testedBy" : "DIPhpDependencies",
+						"errors" : [
+							{
+								"fix" : "",
+								"cause" : "Dicto\\\\RuleResult dependOn Dicto\\\\DictoTalker = True",
+								"details" : ""
+							}
+						]
+					}
+				}
+			},
+			"2" : {
+				"documentation" : "",
+				"value" : "DictoTalker must depend on RuleResult",
+				"failed" : "false",
+				"subrules" : {
+					"2001" : {
+						"failed" : "false",
+						"value" : "DictoTalker must depend on RuleResult",
+						"testedBy" : "DIPhpDependencies"
+					}
+				}
+			},
+			"3" : {
+				"documentation" : "",
+				"value" : "only DictoTalker can depend on DictoTalker",
+				"failed" : "true",
+				"subrules" : {
+					"3001" : {
+						"failed" : "true",
+						"value" : "only DictoTalker can depend on DictoTalker",
+						"testedBy" : "DIPhpDependencies",
+						"errors" : [
+							{
+								"fix" : "",
+								"cause" : "Dicto\\\\Commands\\\\DictoCommand dependOn Dicto\\\\DictoTalker = True",
+								"details" : ""
+							},
+							{
+								"fix" : "",
+								"cause" : "Dicto\\\\RuleResult dependOn Dicto\\\\DictoTalker = True",
+								"details" : ""
+							}
+						]
+					}
+				}
+			}
+		}
+	}
+}

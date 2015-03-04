@@ -1,0 +1,7 @@
+show onlyFailures
+
+check absenceOfPackageCycles > 1 in org.jhotdraw.contrib.*  
+check absenceOfPackageCycles > 1 in org.jhotdraw.test.*  
+check absenceOfPackageCycles > 1 in org.jhotdraw.util.*  
+check absenceOfPackageCycles > 1 in *    
+

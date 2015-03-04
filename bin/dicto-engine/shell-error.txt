@@ -1,0 +1,22 @@
+
+
+                                                                
+  [RuntimeException]                                            
+  Class for 'PhpDA\Parser\Visitor\DieCollector' does not exist  
+                                                                
+
+
+analyze [-m|--mode[="..."]] [-s|--source[="..."]] [-p|--filePattern[="..."]] [-i|--ignore[="..."]] [-f|--formatter[="..."]] [-t|--target[="..."]] [config]
+
+
+
+
+                                                                
+  [RuntimeException]                                            
+  Class for 'PhpDA\Parser\Visitor\DieCollector' does not exist  
+                                                                
+
+
+analyze [-m|--mode[="..."]] [-s|--source[="..."]] [-p|--filePattern[="..."]] [-i|--ignore[="..."]] [-f|--formatter[="..."]] [-t|--target[="..."]] [config]
+
+

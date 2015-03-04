@@ -1,0 +1,235 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+var entityMap = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': '&quot;',
+    "'": '&#39;',
+    "/": '&#x2F;'
+  };
+function escapeHtml(string) {
+    return String(string).replace(/[&<>"'\/]/g, function (s) {
+      return entityMap[s];
+    });
+  }
+
+
+var currPath = '__CURRENTPATH__';
+function submit(){
+	var method = $("#requestType").val();
+	var url = $("#requestURL").val();
+	var body = $("#requestBody").val();
+	var outformat = $("#requestAnswerFormat").val();
+	$("#result").html('<img src="http://i.forbesimg.com/assets/img/loading_spinners/43px_on_transparent.gif" style="margin:50px"/>');
+	
+	
+	if(method == "HTTP GET"){
+		$.get( url, function( data ) {
+			if(typeof data === 'object') {
+				$("#result").html('<pre>'+escapeHtml(JSON.stringify(data, undefined, 2) )+'</pre>');
+				
+			} else {
+				$("#result").html('<pre>'+ escapeHtml(data)+'</pre>');				
+			}	  		
+		});
+	} 
+	else if(method == "HTTP POST"){
+		$.ajax({
+		  url:url,
+		  type:"POST",
+		  data: body,
+		  contentType:"application/json; charset=utf-8",
+		  dataType:"json",
+		  success: function( data ) {   $( "#result" ).html('<pre>'+JSON.stringify(data, undefined, 2) +'</pre>'); }
+		});		
+	}
+	else if(method == "HTTP DELETE"){
+		$.ajax({
+		  url:url,
+		  type:"DELETE",
+		  data: body,
+		  contentType:"application/json; charset=utf-8",
+		  dataType:"json",
+		  success: function( data ) {   $( "#result" ).html('<pre>'+JSON.stringify(data, undefined, 2) +'</pre>'); }
+		});		
+	}
+}
+
+function allInit(){
+	$( "#result" ).html("");
+	$( "#requestBodyContainer" ).hide();	
+}
+
+function getInit(){
+	allInit();
+	$( "#requestType" ).val("HTTP GET");
+}
+function postInit(){
+	allInit();
+	$( "#requestType" ).val("HTTP POST");
+	$( "#requestBodyContainer" ).show();
+}
+function deleteInit(){
+	allInit();
+	$( "#requestType" ).val("HTTP DELETE");
+}
+
+function getSuites(){
+	getInit();
+	$( "#requestURL" ).val("http://localhost:8010/suites");
+}
+function deleteSuite(){
+	deleteInit();
+	$( "#requestURL" ).val("http://localhost:8010/ArbitrarySuiteName/suite");
+}
+
+function getRules(){
+	getInit();
+	$( "#requestURL" ).val("http://localhost:8010/ArbitrarySuiteName/rules");
+}
+function getResults(){
+	getInit();
+	$( "#requestURL" ).val("http://localhost:8010/ArbitrarySuiteName/results");
+}
+function getResultsXML(){
+	getInit();
+	$( "#requestURL" ).val("http://localhost:8010/ArbitrarySuiteName/resultsXML");
+}
+
+function getRunLog(){
+	getInit();
+	$( "#requestAnswerFormat" ).val("text");
+	$( "#requestURL" ).val("http://localhost:8010/ArbitrarySuiteName/runLog");
+}
+function getRulesText(){
+	getInit();
+	$( "#requestAnswerFormat" ).val("text");
+	$( "#requestURL" ).val("http://localhost:8010/ArbitrarySuiteName/rulesText");
+}
+
+function disablePeriodic(){
+	postInit();
+	$( "#requestBodyContainer" ).hide();	
+	$( "#requestURL" ).val("http://localhost:8010/ArbitrarySuiteName/disablePeriodicTests");
+}
+function enablePeriodic(){
+	postInit();
+	$( "#requestBodyContainer" ).hide();	
+	$( "#requestURL" ).val("http://localhost:8010/ArbitrarySuiteName/enablePeriodicTests");
+}
+function deletePeriodic(){
+	deleteInit();
+	$( "#requestURL" ).val("http://localhost:8010/ArbitrarySuiteName/periodicTests");
+}
+
+function createResults(){
+	postInit();
+	$( "#requestBodyContainer" ).hide();
+	$( "#requestURL" ).val("http://localhost:8010/ArbitrarySuiteName/run");
+}
+
+function createSuite(){
+	postInit();
+	$( "#requestURL" ).val("http://localhost:8010/suite");
+	$( "#requestBody" ).val("{\n	\"$DICTO.SUITEID\": \"ArbitrarySuiteName\",\n	\"$DICTO.PROJECT-ROOT\": \""+currPath+"\",\n	\"$DICTO.PROJECT-SRC\": \"src/\",\n	\"$DICTO.PROJECT-BIN\": \"bin/\"\n}");
+}
+
+function createRules(){
+	postInit();
+	$( "#requestURL" ).val("http://localhost:8010/ArbitrarySuiteName/rules");
+	$( "#requestBody" ).val("{\"rules\" : \"\nApplication = Package with name:\\\"org.jhotdraw.application\\\"		\nContrib = Package with name:\\\"org.jhotdraw.contrib\\\"		\nUtil = Package with name:\\\"org.jhotdraw.util\\\"		\nTest = Package with name:\\\"org.jhotdraw.test\\\"		\n 		\nApplication must depend on Util 		\nonly Application can depend on Util            //fails		\nTest cannot depend on Application 		//fails		\nApplication can only depend on Test  		//fails\n\nGoogle = Website with url:\\\"http://www.google.com\\\"\nGoogle must have latency < \\\"100 ms\\\" \"}");
+}
+
+		
+</script>
+
+<style>
+body, td{font-size:1em;font-family:Verdana;margin:0;}
+table.actions {background:#fff;}
+table.actions td {border:1px solid #ddd; padding:14px;}
+table.actions th {border-bottom:1px solid #666;}
+.sec {background:lightgrey; padding:12px; border-top:1px solid #666;}
+
+</style>
+</head>
+<body onload="$('#requestBodyContainer').hide();">
+	<table width="100%"> 
+		<tr>
+			<td valign="top" style="height:370px" width="40%">
+	
+	<div class="sec">1. Select template query: </div><br>
+	<table class="actions">
+		<tr>
+			<th></th>
+			<th>Create</th>
+			<th>Retrieve</th>
+			<th>Delete</th>
+		</tr>	
+		<tr>
+			<td>test suites:</td>
+			<td><a href="#" onclick="createSuite()">Define</a></td>
+			<td><a href="#" onclick="getSuites()">List</a></td> 
+			<td><a href="#" onclick="deleteSuite()">Delete</a></td> 
+		</tr>
+		<tr>
+			<td>rules:</td>
+			<td><a href="#" onclick="createRules()">Define</a></td>
+			<td>List: <a href="#" onclick="getRules()">json</a>/<a href="#" onclick="getRulesText()">text</a></td> 
+			<td>-</td> 
+		</tr>
+		<tr>
+			<td>results:</td>
+			<td><a href="#" onclick="createResults()">Generate</a></td>
+			<td>List: <a href="#" onclick="getResults()">json</a>/<a href="#" onclick="getResultsXML()">XML</a>; <a href="#" onclick="getRunLog()">Log</a></td> 
+			<td>-</td> 
+		</tr>
+		<tr>
+			<td>periodic tests:</td>
+			<td><a href="#" onclick="enablePeriodic()">Enable</a>; <a href="#" onclick="disablePeriodic()">Disable</a></td>
+			<td>-</td> 
+			<td><a href="#" onclick="deletePeriodic()">Delete</a></td> 
+		</tr>
+	</table>
+		<br><br>
+		Typical use case: 
+		<br><a href="#" onclick="createSuite()">define test suite</a> -> 
+		<a href="#" onclick="createRules()">define rules</a> -> 
+		<a href="#" onclick="createResults()">generate results</a> -> 
+		<a href="#" onclick="getResults()">list results</a>
+	
+	</td><td valign="top" width="50%">
+	<div class="sec">2. HTTP Query:</div> <br>
+	
+	<table style="padding:20px ">
+		<tr>
+			<td width="120">Request Type:</td>
+			<td> <input type="text" id="requestType" style="background:lightgrey;width:400px;"/> </td>
+		</tr>
+		<tr>
+			<td>Request URL:</td>
+			<td> <input type="text"  id="requestURL" style="background:lightgrey;width:400px;"> </td>
+		</tr>
+		<tr id="requestBodyContainer">
+			<td>Request body:</td>
+			<td> <textarea id="requestBody" style="background:lightgrey;width:500px;height:200px"></textarea> </td>
+		</tr>		
+	</table>				
+	
+	</td></tr></table>
+	<table width="100%"> 
+		<tr>
+			<td width="40%">	</td>
+			<td align="center" width="60%"><br>
+				<input type="button" value="Send Request" onClick="submit();" style="background:#54C571;font-size:1.3em; padding:5px;width:200px">				
+			</td>
+		</tr>		
+	</table>
+	<br>
+	<div class="sec">3.	Response: </div> <br>
+	<div id="result" style="margin:5px 30px; background:lightgrey; width: 90%;overflow:auto"></div>
+	
+</body>
+</html>
