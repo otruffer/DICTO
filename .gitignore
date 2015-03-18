@@ -1,3 +1,9 @@
 HugeProject
 TestPhpProject/
 bin/tools/marea/
+bin/dicto-engine/shell-output.txt
+bin/tools/phpda/dictoChecker
+bin/analysis
+bin/dicto-engine/PharoDebug.log
+bin/dicot-engine/shell-error.txt
+
