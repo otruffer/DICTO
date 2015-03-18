@@ -1,12 +1,25 @@
- [INFO] :: generate report (/home/otruffer/dicto/bin/analysis/ilias-test/results.xml)
-n exitOrDie
-e of [WholeIliasCodebase] is not of type: Website // var type of [exitOrDie] is not of type: Website]
-t of type: Package // var type of [exitOrDie] is not of type: System // var type of [exitOrDie] is not of type: Package]
+ [VERBOSE] 
+> Passed rules: 
+ depend on ilLanguage
+lobal
+r
+
+r
+asses can depend on ilLanguage
+ of [GUIClasses] is not of type: XMLTag // var type of [ilLanguage] is not of type: XMLTag]
+is not of type: XMLTagAttribute]
+age] is not of type: System // var type of [ilLanguage] is not of type: Package]
 ass]
 
- type: Class // var type of [exitOrDie] is not of type: Method // var type of [exitOrDie] is not of type: Field]
+ass // var type of [ilLanguage] is not of type: Method // var type of [ilLanguage] is not of type: Field]
+t of type: Field]
+pe: Field]
 : Field]
-epend on triggerError
+nt feedback for developers and end users.
+ *
+ * See: http://example.com/link-to-exception-handling-concept
+ */
+WholeIliasCodebase cannot depend on triggerError
 
 /**
  * Exit and die are a bad idea in both development and production. In development you have no idea what
@@ -19,9 +32,8 @@ epend on triggerError
  * See: http://example.com/link-to-exception-handling-concept
  */
 WholeIliasCodebase cannot depend on exitOrDie
-t() at the moment. The
- *            rule still documents the violation as it should be removed sometimes in the future.
- *
- * See: http://example.com/link-to-exception-handling-concept
- */
-WholeIliasCodebase cannot depend on exitOrDie
+
+only GUIClasses can depend on ilLanguageGlobal
+only GUIClasses can depend on ilLanguage
+ot depend on SetExceptionHandler
+

@@ -1,6 +1,6 @@
 {
 	"results" : {
-		"id" : "1425462358",
+		"id" : "1426675986",
 		"rules" : {
 			"1" : {
 				"documentation" : "",
@@ -21,6 +21,18 @@
 					}
 				}
 			},
+			"4" : {
+				"documentation" : "",
+				"value" : "SYSTEM cannot contain code clones",
+				"failed" : "false",
+				"subrules" : {
+					"4001" : {
+						"failed" : "false",
+						"value" : "SYSTEM cannot contain code clones ",
+						"testedBy" : "DIPMDClones"
+					}
+				}
+			},
 			"2" : {
 				"documentation" : "",
 				"value" : "DictoTalker must depend on RuleResult",
@@ -30,6 +42,18 @@
 						"failed" : "false",
 						"value" : "DictoTalker must depend on RuleResult",
 						"testedBy" : "DIPhpDependencies"
+					}
+				}
+			},
+			"5" : {
+				"documentation" : "",
+				"value" : "WholeCodeBase cannot contain code clones",
+				"failed" : "false",
+				"subrules" : {
+					"5001" : {
+						"failed" : "false",
+						"value" : "WholeCodeBase cannot contain code clones ",
+						"testedBy" : "DIPMDClones"
 					}
 				}
 			},
