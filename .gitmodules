@@ -1,0 +1,3 @@
+[submodule "bin/tools/phpda"]
+	path = bin/tools/phpda
+	url = git@github.com:otruffer/PhpDependencyAnalysis.git
